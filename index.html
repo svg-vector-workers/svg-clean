@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Clean</title>
+</head>
+<body>
+
+  <div id="svg">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 288 288" enable-background="new 0 0 288 288" xml:space="preserve">
+    <text transform="matrix(1 0 0 1 42.5236 65.4825)" font-family="'HelveticaNeue'" font-size="12">Lots of testing makes Jack a dull boy.</text>
+    <text transform="matrix(1 0 0 1 42.5236 65.4825)" font-family="'HelveticaNeue'" font-size="12">
+      "Lots of testing makes Jack a dull boy."
+    </text>
+    <path fill="#ED1C24" stroke="#000000" stroke-miterlimit="10" d="M191.3,254.5c0,6.1-4.9,11-11,11h-72.6c-6.1,0-11-4.9-11-11v-54.7
+      c0-6.1,4.9-11,11-11h72.6c6.1,0,11,4.9,11,11V254.5z"/>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="93.9013" y1="125.184" x2="194.0987" y2="125.184">
+      <stop  offset="0" style="stop-color:#FFF33B"/>
+      <stop  offset="4.010540e-02" style="stop-color:#FEE72E"/>
+      <stop  offset="0.1171" style="stop-color:#FED51B"/>
+      <stop  offset="0.1964" style="stop-color:#FDCA10"/>
+      <stop  offset="0.2809" style="stop-color:#FDC70C"/>
+      <stop  offset="0.6685" style="stop-color:#F3903F"/>
+      <stop  offset="0.8876" style="stop-color:#ED683C"/>
+      <stop  offset="1" style="stop-color:#E93E3A"/>
+    </linearGradient>
+    <polygon fill="url(#SVGID_1_)" stroke="#000000" stroke-miterlimit="10" points="144,77.5 159.5,108.9 194.1,113.9 169,138.4
+      175,172.8 144,156.6 113,172.8 119,138.4 93.9,113.9 128.5,108.9 "/>
+    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="128.9361" y1="22.9904" x2="159.0639" y2="22.9904">
+      <stop  offset="0" style="stop-color:#FFF33B"/>
+      <stop  offset="4.010540e-02" style="stop-color:#FEE72E"/>
+      <stop  offset="0.1171" style="stop-color:#FED51B"/>
+      <stop  offset="0.1964" style="stop-color:#FDCA10"/>
+      <stop  offset="0.2809" style="stop-color:#FDC70C"/>
+      <stop  offset="0.6685" style="stop-color:#F3903F"/>
+      <stop  offset="0.8876" style="stop-color:#ED683C"/>
+      <stop  offset="1" style="stop-color:#E93E3A"/>
+    </linearGradient>
+    <circle fill="url(#SVGID_2_)" stroke="#000000" stroke-miterlimit="10" cx="144" cy="23" r="15.1"/>
+    </svg>
+  </div>
+
+  <script src="svg-clean.js"></script>
+  <script>
+    var SVGCleaner = SVGClean({
+      consolidate_gradients: true,
+      illustrator_ids: true
+    });
+    var svg_code = document.getElementById('svg').innerHTML;
+    SVGCleaner.clean(svg_code);
+  </script>
+</body>
+</html>
